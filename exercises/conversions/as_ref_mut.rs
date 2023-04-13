@@ -7,8 +7,9 @@
 
 // Obtain the number of bytes (not characters) in the given argument.
 // TODO: Add the AsRef trait appropriately as a trait bound.
+use std::mem::size_of;
 fn byte_counter<T>(arg: T) -> usize {
-    arg.as_ref().as_bytes().len()
+    size_of::<T>(arg)
 }
 
 // Obtain the number of characters (not bytes) in the given argument.
@@ -21,6 +22,7 @@ fn char_counter<T>(arg: T) -> usize {
 // TODO: Add the appropriate trait bound.
 fn num_sq<T>(arg: &mut T) {
     // TODO: Implement the function body.
+    
     ???
 }
 
